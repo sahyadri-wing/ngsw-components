@@ -28,6 +28,8 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/scss/bootstrap.scss",
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -84,6 +86,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -143,6 +146,41 @@
             "tsConfig": [
               "projects/ngsw-table/tsconfig.lib.json",
               "projects/ngsw-table/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ngsw-components": {
+      "projectType": "library",
+      "root": "projects/ngsw-components",
+      "sourceRoot": "projects/ngsw-components/src",
+      "prefix": "ngsw",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngsw-components/tsconfig.lib.json",
+            "project": "projects/ngsw-components/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngsw-components/src/test.ts",
+            "tsConfig": "projects/ngsw-components/tsconfig.spec.json",
+            "karmaConfig": "projects/ngsw-components/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngsw-components/tsconfig.lib.json",
+              "projects/ngsw-components/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"

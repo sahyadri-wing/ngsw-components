@@ -24,6 +24,12 @@
       ],
       "ngsw-table/*": [
         "dist/ngsw-table/*"
+      ],
+      "ngsw-components": [
+        "dist/ngsw-components"
+      ],
+      "ngsw-components/*": [
+        "dist/ngsw-components/*"
       ]
     }
   },

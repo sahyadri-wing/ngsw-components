@@ -1,0 +1,9 @@
+{
+  "name": "ngsw-components",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^8.1.3",
+    "@angular/core": "^8.1.3",
+    "bootstrap": "^4.3.1"
+  }
+}

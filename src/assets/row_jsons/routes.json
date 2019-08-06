@@ -1,0 +1,65 @@
+{"response":[{
+        "path": "/master/country",
+        "name": "Country"
+    },
+    {
+        "path": "/master/zone",
+        "name": "Zone"
+    },
+    {
+        "path": "/master/state",
+        "name": "State"
+    },
+    {
+        "path": "/master/district",
+        "name": "District"
+    },
+    {
+        "path": "/master/tehsil",
+        "name": "Tehsil"
+    },
+    {
+        "path": "/master/city",
+        "name": "City"
+    },
+    {
+        "path": "/master/pin",
+        "name": "Pin"
+    },
+    {
+        "path": "/master/customer",
+        "name": "Customer"
+    },
+    {
+        "path": "/master/part",
+        "name": "Part"
+    },
+    {
+        "path": "/master/make",
+        "name": "Make"
+    },
+    {
+        "path": "/master/segment",
+        "name": "Segment"
+    },
+    {
+        "path": "/master/variant",
+        "name": "Variant"
+    },
+    {
+        "path": "/master/product",
+        "name": "Product"
+    },
+    {
+        "path": "/master/model",
+        "name": "Model"
+    },
+    {
+        "path": "/master/material",
+        "name": "Material"
+    },
+    {
+        "path": "customerServiceBooking",
+        "name": "ServiceBooking"
+    }
+]}

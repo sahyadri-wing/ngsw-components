@@ -1,0 +1,36 @@
+{
+    "response": [{
+      "stateCode": "MH",
+      "id": 1
+    }, {
+      "stateCode": "GJ",
+      "id": 2
+    }, {
+      "stateCode": "MP",
+      "id": 3
+    }, {
+      "stateCode": "J&K",
+      "id": 4
+    }, {
+      "stateCode": "DL",
+      "id": 5
+    }, {
+      "stateCode": "KL",
+      "id": 6
+    }, {
+      "stateCode": "TL",
+      "id": 7
+    }, {
+      "stateCode": "KA",
+      "id": 8
+    }, {
+      "stateCode": "TN",
+      "id": 9
+    }, {
+      "stateCode": "RJ",
+      "id": 10
+    }],
+    "message": "Data Found",
+    "status": "success"
+  }
+  

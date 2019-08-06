@@ -1,0 +1,1171 @@
+{
+    "response":[
+        {
+            "id": 1,
+            "level": 0,
+            "roleName": "User Managment",
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0,
+            "verticalFlag": 1,
+            "Sequence": 1
+        },
+        {
+            "id": 2,
+            "parentId": 1,
+            "level": 1,
+            "roleName": "Manage User",
+            "roleHideStatus": 0,
+            "roleDeleteStatus": 0,
+            "verticalFlag": 1,
+            "routerLink": "/userManagment/manageUser"
+        },
+        {
+            "id": 3,
+            "parentId": 2,
+            "level": 2,
+            "roleName": "Add",
+            "permissionFlag": 1,
+            "roleHideStatus": 0,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 4,
+            "parentId": 2,
+            "level": 2,
+            "roleName": "Update",
+            "permissionFlag": 1,
+            "roleHideStatus": 0,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 5,
+            "parentId": 2,
+            "level": 2,
+            "roleName": "View",
+            "permissionFlag": 1,
+            "roleHideStatus": 0,
+            "roleDeleteStatus": 0,
+            "verticalFlag": 1
+        },
+        {
+            "id": 6,
+            "parentId": 1,
+            "level": 1,
+            "roleName": "Manage User Type",
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0,
+            "routerLink": "/userManagment/manageUserType"
+        },
+        {
+            "id": 7,
+            "parentId": 6,
+            "level": 2,
+            "roleName": "Add",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 8,
+            "parentId": 6,
+            "level": 2,
+            "roleName": "Update",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 9,
+            "parentId": 6,
+            "level": 2,
+            "roleName": "View",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 10,
+            "parentId": 1,
+            "level": 1,
+            "roleName": "Assign Role To User",
+            "verticalFlag": 1,
+            "routerLink": "/master/role/assign"
+        },
+        {
+            "id": 11,
+            "level": 0,
+            "roleName": "Assign Services",
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0,
+            "verticalFlag": 0,
+            "Sequence": 3
+        },
+        {
+            "id": 12,
+            "parentId": 11,
+            "level": 1,
+            "roleName": "Assign Service to Service Center/Technician",
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0,
+            "routerLink": "/assignComplaintToCenter"
+        },
+        {
+            "id": 13,
+            "parentId": 11,
+            "level": 1,
+            "roleName": "Assign Service To Technician By Service Center",
+            "roleHideStatus": 0,
+            "roleDeleteStatus": 0,
+            "routerLink": "/assignComplaintToTechnician"
+        },
+        {
+            "id": 14,
+            "level": 0,
+            "roleName": "Complaint And Feedback",
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0,
+            "verticalFlag": 1,
+            "routerLink": "/complaintAndFeedback"
+        },
+        {
+            "id": 15,
+            "parentId": 14,
+            "level": 1,
+            "roleName": "Add",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 16,
+            "parentId": 14,
+            "level": 1,
+            "roleName": "View",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 17,
+            "level": 0,
+            "roleName": "Admin Panel",
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0,
+            "verticalFlag": 1,
+            "Sequence": 2
+        },
+        {
+            "id": 18,
+            "parentId": 17,
+            "level": 1,
+            "roleName": "Role Master",
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0,
+            "verticalFlag": 1,
+            "routerLink": "/master/role/manage"
+        },
+        {
+            "id": 19,
+            "parentId": 18,
+            "level": 2,
+            "roleName": "Add",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 20,
+            "parentId": 18,
+            "level": 2,
+            "roleName": "Update",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 21,
+            "parentId": 18,
+            "level": 2,
+            "roleName": "View",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 22,
+            "parentId": 17,
+            "level": 1,
+            "roleName": "Country Master",
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0,
+            "verticalFlag": 1,
+            "routerLink": "/master/country"
+        },
+        {
+            "id": 23,
+            "parentId": 22,
+            "level": 2,
+            "roleName": "Add",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 24,
+            "parentId": 22,
+            "level": 2,
+            "roleName": "update",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 25,
+            "parentId": 22,
+            "level": 2,
+            "roleName": "View",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 26,
+            "parentId": 17,
+            "level": 1,
+            "roleName": "Zone Master",
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0,
+            "verticalFlag": 1,
+            "routerLink": "/master/zone"
+        },
+        {
+            "id": 27,
+            "parentId": 26,
+            "level": 2,
+            "roleName": "Add",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 28,
+            "parentId": 26,
+            "level": 2,
+            "roleName": "update",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 29,
+            "parentId": 26,
+            "level": 2,
+            "roleName": "View",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 30,
+            "parentId": 17,
+            "level": 1,
+            "roleName": "State Master",
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0,
+            "verticalFlag": 1,
+            "routerLink": "/master/state"
+        },
+        {
+            "id": 31,
+            "parentId": 30,
+            "level": 2,
+            "roleName": "Add",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 32,
+            "parentId": 30,
+            "level": 2,
+            "roleName": "Update",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 33,
+            "parentId": 30,
+            "level": 2,
+            "roleName": "View",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 34,
+            "parentId": 17,
+            "level": 1,
+            "roleName": "District Master",
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0,
+            "verticalFlag": 1,
+            "routerLink": "/master/district"
+        },
+        {
+            "id": 35,
+            "parentId": 34,
+            "level": 2,
+            "roleName": "Add",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 36,
+            "parentId": 34,
+            "level": 2,
+            "roleName": "Update",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 37,
+            "parentId": 34,
+            "level": 2,
+            "roleName": "View",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 38,
+            "parentId": 17,
+            "level": 1,
+            "roleName": "Tehsil Master",
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0,
+            "verticalFlag": 1,
+            "routerLink": "/master/tehsil"
+        },
+        {
+            "id": 39,
+            "parentId": 38,
+            "level": 2,
+            "roleName": "Add",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 40,
+            "parentId": 38,
+            "level": 2,
+            "roleName": "Update",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 41,
+            "parentId": 38,
+            "level": 2,
+            "roleName": "View",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 42,
+            "parentId": 17,
+            "level": 1,
+            "roleName": "City Master",
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0,
+            "verticalFlag": 1,
+            "routerLink": "/master/city"
+        },
+        {
+            "id": 43,
+            "parentId": 42,
+            "level": 2,
+            "roleName": "Add",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 44,
+            "parentId": 42,
+            "level": 2,
+            "roleName": "Update",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 45,
+            "parentId": 42,
+            "level": 2,
+            "roleName": "View",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 46,
+            "parentId": 17,
+            "level": 1,
+            "roleName": "Pin Code",
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0,
+            "verticalFlag": 1,
+            "routerLink": "/master/pin"
+        },
+        {
+            "id": 47,
+            "parentId": 46,
+            "level": 2,
+            "roleName": "Add",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 48,
+            "parentId": 46,
+            "level": 2,
+            "roleName": "Update",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 49,
+            "parentId": 46,
+            "level": 2,
+            "roleName": "View",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 50,
+            "parentId": 17,
+            "level": 1,
+            "roleName": "Customer Master",
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0,
+            "verticalFlag": 1,
+            "routerLink": "/master/customer"
+        },
+        {
+            "id": 51,
+            "parentId": 50,
+            "level": 2,
+            "roleName": "Add",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 52,
+            "parentId": 50,
+            "level": 2,
+            "roleName": "Update",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 53,
+            "parentId": 50,
+            "level": 2,
+            "roleName": "View",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 54,
+            "parentId": 17,
+            "level": 1,
+            "roleName": "Part Master",
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0,
+            "verticalFlag": 1,
+            "routerLink": "/master/part"
+        },
+        {
+            "id": 55,
+            "parentId": 54,
+            "level": 2,
+            "roleName": "Add",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 56,
+            "parentId": 54,
+            "level": 2,
+            "roleName": "Update",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 57,
+            "parentId": 54,
+            "level": 2,
+            "roleName": "View",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 58,
+            "parentId": 17,
+            "level": 1,
+            "roleName": "Make Master",
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0,
+            "verticalFlag": 1,
+            "routerLink": "/master/make"
+        },
+        {
+            "id": 59,
+            "parentId": 58,
+            "level": 2,
+            "roleName": "Add",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 60,
+            "parentId": 58,
+            "level": 2,
+            "roleName": "Update",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 61,
+            "parentId": 58,
+            "level": 2,
+            "roleName": "View",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 62,
+            "parentId": 17,
+            "level": 1,
+            "roleName": "Segment Master",
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0,
+            "verticalFlag": 1,
+            "routerLink": "/master/segment"
+        },
+        {
+            "id": 63,
+            "parentId": 62,
+            "level": 2,
+            "roleName": "Add",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 64,
+            "parentId": 62,
+            "level": 2,
+            "roleName": "Update",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 65,
+            "parentId": 62,
+            "level": 2,
+            "roleName": "View",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 66,
+            "parentId": 17,
+            "level": 1,
+            "roleName": "Product Master",
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0,
+            "verticalFlag": 1,
+            "routerLink": "/master/product"
+        },
+        {
+            "id": 67,
+            "parentId": 66,
+            "level": 2,
+            "roleName": "Add",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 68,
+            "parentId": 66,
+            "level": 2,
+            "roleName": "Update",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 69,
+            "parentId": 66,
+            "level": 2,
+            "roleName": "View",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 70,
+            "parentId": 17,
+            "level": 1,
+            "roleName": "Variant Master",
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0,
+            "verticalFlag": 1,
+            "routerLink": "/master/variant"
+        },
+        {
+            "id": 71,
+            "parentId": 70,
+            "level": 2,
+            "roleName": "Add",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 72,
+            "parentId": 70,
+            "level": 2,
+            "roleName": "Update",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 73,
+            "parentId": 70,
+            "level": 2,
+            "roleName": "View",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 74,
+            "parentId": 17,
+            "level": 1,
+            "roleName": "Model Master",
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0,
+            "verticalFlag": 1,
+            "routerLink": "/master/model"
+        },
+        {
+            "id": 75,
+            "parentId": 74,
+            "level": 2,
+            "roleName": "Add",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 76,
+            "parentId": 74,
+            "level": 2,
+            "roleName": "Update",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 77,
+            "parentId": 74,
+            "level": 2,
+            "roleName": "View",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 78,
+            "parentId": 17,
+            "level": 1,
+            "roleName": "Material Master",
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0,
+            "verticalFlag": 1,
+            "routerLink": "/master/material"
+        },
+        {
+            "id": 79,
+            "parentId": 78,
+            "level": 2,
+            "roleName": "Add",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 80,
+            "parentId": 78,
+            "level": 2,
+            "roleName": "Update",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 81,
+            "parentId": 78,
+            "level": 2,
+            "roleName": "View",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 82,
+            "parentId": 17,
+            "level": 1,
+            "roleName": "AMC Master",
+            "verticalFlag": 1
+        },
+        {
+            "id": 83,
+            "parentId": 82,
+            "level": 2,
+            "roleName": "Add",
+            "permissionFlag": 1
+        },
+        {
+            "id": 84,
+            "parentId": 82,
+            "level": 2,
+            "roleName": "Update",
+            "permissionFlag": 1
+        },
+        {
+            "id": 85,
+            "parentId": 82,
+            "level": 2,
+            "roleName": "View",
+            "permissionFlag": 1
+        },
+        {
+            "id": 86,
+            "parentId": 17,
+            "level": 1,
+            "roleName": "Incentive Master",
+            "verticalFlag": 1
+        },
+        {
+            "id": 87,
+            "parentId": 86,
+            "level": 2,
+            "roleName": "Add",
+            "permissionFlag": 1
+        },
+        {
+            "id": 88,
+            "parentId": 86,
+            "level": 2,
+            "roleName": "Update",
+            "permissionFlag": 1
+        },
+        {
+            "id": 89,
+            "parentId": 86,
+            "level": 2,
+            "roleName": "View",
+            "permissionFlag": 1
+        },
+        {
+            "id": 90,
+            "parentId": 17,
+            "level": 1,
+            "roleName": "Extended Warranty Master",
+            "verticalFlag": 1
+        },
+        {
+            "id": 91,
+            "parentId": 90,
+            "level": 2,
+            "roleName": "Add",
+            "permissionFlag": 1
+        },
+        {
+            "id": 92,
+            "parentId": 90,
+            "level": 2,
+            "roleName": "Update",
+            "permissionFlag": 1
+        },
+        {
+            "id": 93,
+            "parentId": 90,
+            "level": 2,
+            "roleName": "View",
+            "permissionFlag": 1
+        },
+        {
+            "id": 94,
+            "level": 0,
+            "roleName": "AMC Registration",
+            "verticalFlag": 1,
+            "Sequence": 3,
+            "routerLink": "/amcRegistration"
+        },
+        {
+            "id": 95,
+            "parentId": 94,
+            "level": 1,
+            "roleName": "Add",
+            "permissionFlag": 1
+        },
+        {
+            "id": 96,
+            "parentId": 94,
+            "level": 1,
+            "roleName": "Update",
+            "permissionFlag": 1
+        },
+        {
+            "id": 97,
+            "parentId": 94,
+            "level": 1,
+            "roleName": "View",
+            "permissionFlag": 1
+        },
+        {
+            "id": 98,
+            "level": 0,
+            "roleName": "Incentive Management",
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0,
+            "verticalFlag": 1,
+            "Sequence": 4
+        },
+        {
+            "id": 99,
+            "parentId": 98,
+            "level": 1,
+            "roleName": "Add",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 100,
+            "parentId": 98,
+            "level": 1,
+            "roleName": "Update",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 101,
+            "parentId": 98,
+            "level": 1,
+            "roleName": "View",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 102,
+            "level": 0,
+            "roleName": "Extended Warranty Registration",
+            "roleHideStatus": 0,
+            "roleDeleteStatus": 0,
+            "verticalFlag": 1,
+            "Sequence": 5
+        },
+        {
+            "id": 103,
+            "parentId": 102,
+            "level": 1,
+            "roleName": "Add",
+            "permissionFlag": 1,
+            "roleHideStatus": 0,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 104,
+            "parentId": 102,
+            "level": 1,
+            "roleName": "Update",
+            "permissionFlag": 1,
+            "roleHideStatus": 0,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 105,
+            "parentId": 102,
+            "level": 1,
+            "roleName": "View",
+            "permissionFlag": 1,
+            "roleHideStatus": 0,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 110,
+            "level": 0,
+            "roleName": "Link Option Management",
+            "roleHideStatus": 0,
+            "roleDeleteStatus": 0,
+            "verticalFlag": 1
+        },
+        {
+            "id": 111,
+            "parentId": 110,
+            "level": 1,
+            "roleName": "Add",
+            "permissionFlag": 1,
+            "roleHideStatus": 0,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 112,
+            "parentId": 110,
+            "level": 1,
+            "roleName": "Update Document And Link",
+            "permissionFlag": 1,
+            "roleHideStatus": 0,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 113,
+            "parentId": 110,
+            "level": 1,
+            "roleName": "View",
+            "permissionFlag": 1,
+            "roleHideStatus": 0,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 114,
+            "level": 0,
+            "roleName": "Report",
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0,
+            "verticalFlag": 1
+        },
+        {
+            "id": 115,
+            "parentId": 114,
+            "level": 1,
+            "roleName": "Add",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 116,
+            "parentId": 114,
+            "level": 1,
+            "roleName": "Update",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 117,
+            "parentId": 114,
+            "level": 1,
+            "roleName": "View",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 118,
+            "level": 0,
+            "roleName": "Service Center Creation",
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0,
+            "verticalFlag": 0,
+            "Sequence": 1,
+            "routerLink": "/serviceCenterCreation"
+        },
+        {
+            "id": 119,
+            "parentId": 118,
+            "level": 1,
+            "roleName": "Add",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 120,
+            "parentId": 118,
+            "level": 1,
+            "roleName": "update",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 121,
+            "parentId": 118,
+            "level": 1,
+            "roleName": "view",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 122,
+            "level": 0,
+            "roleName": "Customer Product Registration",
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0,
+            "verticalFlag": 0,
+            "Sequence": 2,
+            "routerLink": "/customerRegistration"
+        },
+        {
+            "id": 123,
+            "parentId": 122,
+            "level": 1,
+            "roleName": "Add",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 124,
+            "parentId": 122,
+            "level": 1,
+            "roleName": "Update",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 125,
+            "parentId": 122,
+            "level": 1,
+            "roleName": "View",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 126,
+            "level": 0,
+            "roleName": "Service Report Generation",
+            "roleHideStatus": 0,
+            "roleDeleteStatus": 0,
+            "verticalFlag": 1,
+            "Sequence": 7,
+            "routerLink": "/serviceReport"
+        },
+        {
+            "id": 127,
+            "parentId": 126,
+            "level": 1,
+            "roleName": "Add",
+            "permissionFlag": 1,
+            "roleHideStatus": 0,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 128,
+            "parentId": 126,
+            "level": 1,
+            "roleName": "Update",
+            "permissionFlag": 1,
+            "roleHideStatus": 0,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 129,
+            "parentId": 126,
+            "level": 1,
+            "roleName": "View",
+            "permissionFlag": 1,
+            "roleHideStatus": 0,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 130,
+            "level": 0,
+            "roleName": "Customer Service Booking",
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0,
+            "verticalFlag": 0,
+            "Sequence": 4,
+            "routerLink": "/customerServiceBooking"
+        },
+        {
+            "id": 131,
+            "parentId": 130,
+            "level": 1,
+            "roleName": "Add",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 132,
+            "parentId": 130,
+            "level": 1,
+            "roleName": "Update",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 133,
+            "parentId": 130,
+            "level": 1,
+            "roleName": "View",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        },
+        {
+            "id": 134,
+            "level": 0,
+            "roleName": "Notification Managment",
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0,
+            "verticalFlag": 0,
+            "Sequence": 5
+        },
+        {
+            "id": 135,
+            "parentId": 134,
+            "level": 1,
+            "roleName": "Add",
+            "permissionFlag": 1,
+            "roleHideStatus": 1,
+            "roleDeleteStatus": 0
+        }
+    ]
+}

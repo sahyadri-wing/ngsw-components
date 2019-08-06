@@ -1,0 +1,33 @@
+{
+  "response": [{
+    "zoneName": "zone1",
+    "id": 1
+  }, {
+    "zoneName": "zone2",
+    "id": 2
+  }, {
+    "zoneName": "zone3",
+    "id": 3
+  }, {
+    "zoneName": "zone4",
+    "id": 4
+  }, {
+    "zoneName": "zone5",
+    "id": 5
+  }, {
+    "zoneName": "zone6",
+    "id": 6
+  }, {
+    "zoneName": "zone7",
+    "id": 7
+  }, {
+    "zoneName": "zone8",
+    "id": 8
+  }, {
+    "zoneName": "zone9",
+    "id": 9
+  }, {
+    "zoneName": "zone10",
+    "id": 10
+  }]
+}
