@@ -93,9 +93,10 @@
                 <tbody *ngIf="dataTable.tableBody && dataTable.tableBody['content']">
                   <tr>
                     <td></td>
-                    <td *ngFor="let hr of dataTable.headerRow" [ngClass]="{'d-none':hr.title ==='id'}" class="text-center">
+                    <ng-content select="td" (keyup)="searchIntoRow(hr, $event)"></ng-content>
+                    <!-- <td *ngFor="let hr of dataTable.headerRow" [ngClass]="{'d-none':hr.title ==='id'}" class="text-center">
                       <input type="text" (keyup)="searchIntoRow(hr, $event)">
-                    </td>
+                    </td> -->
                   </tr>
                   <tr *ngFor="let row of dataTable.tableBody['content']; let recordIndex = index">
                     <td class="text-left">{{recordIndex+1}}</td>

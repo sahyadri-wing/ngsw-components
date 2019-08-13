@@ -40,6 +40,7 @@ import {
 } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TableDataService } from './table-data.service';
+import { SearchFieldDirective } from './directives/search-field.directive';
 
 @NgModule({
   exports: [
@@ -75,6 +76,7 @@ import { TableDataService } from './table-data.service';
     MatToolbarModule,
     MatTooltipModule
   ],
+  declarations: [],
 })
 export class MaterialModule { }
 
@@ -91,8 +93,9 @@ export class MaterialModule { }
     DynamicTableComponent,
     CamelCaseToRegularStringPipe,
     GetKeyValueFromObjectPipe,
+    SearchFieldDirective
   ],
-  exports: [DynamicTableComponent, CamelCaseToRegularStringPipe]
+  exports: [DynamicTableComponent, CamelCaseToRegularStringPipe, SearchFieldDirective]
 })
 export class DynamicTableModule {
   public static forRoot(): ModuleWithProviders {

@@ -6,20 +6,23 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { TestComponent } from './test/test.component';
-import { DynamicTableModule } from 'ngsw-components';
+import { DynamicTableModule, MaterialModule } from '../../dist/ngsw-components';
+
+// import { DynamicTableModule } from 'ngsw-components';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent
+    TestComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    DynamicTableModule.forRoot()
+    DynamicTableModule.forRoot(),
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

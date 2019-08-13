@@ -9,13 +9,18 @@ import {
   ViewChild,
   ElementRef,
   Inject,
-  OnChanges
+  OnChanges,
+  ContentChildren,
+  QueryList,
+  AfterContentInit,
+  Renderer2
 } from '@angular/core';
 // import { LoginModel } from '../../../pages/login/login-model';
 import { InfoForGetPagination, DataTable, ActionButton, ActionOnTableRecord, TableSort, TableHeading } from '../dynamic-table.domain';
 import { FormControl } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { MatPaginatorIntl } from '@angular/material';
+import { SearchFieldDirective } from '../directives/search-field.directive';
 // import { Urlconst } from 'app/constants/urlConst';
 
 declare const $: any;
@@ -26,7 +31,7 @@ declare const $: any;
   styleUrls: ['./dynamic-table.component.scss'],
   providers: [MatPaginatorIntl]
 })
-export class DynamicTableComponent implements OnInit, AfterViewInit, OnChanges {
+export class DynamicTableComponent implements OnInit, AfterViewInit, OnChanges, AfterContentInit {
 
   @Input() downloadTempleteLink: string;
   @Input() exportLink: string;
@@ -83,6 +88,7 @@ export class DynamicTableComponent implements OnInit, AfterViewInit, OnChanges {
 
   @ViewChild('downloadExcel', { static: false }) public downloadExcel: ElementRef;
   public fileDownloadUrl: string;
+  @ContentChildren(SearchFieldDirective, { descendants: true }) searchFieldChildren !: QueryList<SearchFieldDirective>;
 
   public isPreviewActionBtn = true;
   public isAccountActionBtn = false;
@@ -99,7 +105,7 @@ export class DynamicTableComponent implements OnInit, AfterViewInit, OnChanges {
   filesToUpload = [];
   private columnFilterMap = new Map();
 
-  constructor(private httpClient: HttpClient, private matPaginatorIntl: MatPaginatorIntl) {
+  constructor(private httpClient: HttpClient, private matPaginatorIntl: MatPaginatorIntl, private renderer: Renderer2) {
     // this.dataTable = this.initDataTable();
     // this.actionButtons = this.initActionButtons();
     // // console.log('this.actionButtons', this.actionButtons)
@@ -139,6 +145,31 @@ export class DynamicTableComponent implements OnInit, AfterViewInit, OnChanges {
 
   ngAfterViewInit() {
     // $('.card .material-datatables label').addClass('form-group');
+  }
+  ngAfterContentInit(): void {
+    console.log('searchFieldChildren', this.searchFieldChildren);
+    this.searchFieldChildren.map(res => {
+      console.log('res => searchFieldChildren ', res);
+      if (res && res.searchFieldRef && res.searchFieldRef.nodeName === 'INPUT') {
+        let simple = this.renderer.listen(res.searchFieldRef, 'change', (evt) => {
+          console.log('Clicking the button', evt);
+          this.searchIntoRow(res.searchColumnName, evt.srcElement.value);
+        });
+      }
+      if (res && res.searchFieldRef && res.searchFieldRef.nodeName === 'SELECT') {
+        let simple = this.renderer.listen(res.searchFieldRef, 'change', (evt) => {
+          console.log('change', evt);
+          // this.searchIntoRow(res.searchColumnName, evt.srcElement.value);
+        });
+      }
+      if (res && res.searchFieldRef && res.searchFieldRef.nodeName === 'INPUT') {
+        res.searchFieldRef.addEventListener('dateChange', (evt) => {
+          console.log('Clicking the button', evt);
+          // this.searchIntoRow(res.searchColumnName, evt.srcElement);
+        });
+      }
+    })
+
   }
   private initDataTable(): DataTable {
     return { headerRow: [], tableBody: {} } as DataTable;
@@ -206,21 +237,20 @@ export class DynamicTableComponent implements OnInit, AfterViewInit, OnChanges {
       // );
     });
   }
-  public searchIntoRow(searchColumn: string, event?: any) {
+  public searchIntoRow(searchColumn: string, searchText: string) {
     // this.dataTableCopy = JSON.parse(JSON.stringify(this.dataTable));
-    // // console.log(' this.dataTableCopy', this.dataTableCopy);
-    const searchText = event.srcElement.value;
+    // console.log(' this.dataTableCopy', this.dataTableCopy);
     // console.log('searchText, searchColumn', searchText, searchColumn, event, event.target.value);
-    this.columnFilterMap.set(searchColumn['title'], searchText);
+    this.columnFilterMap.set(searchColumn, searchText);
 
     if (!searchText) {
-      this.columnFilterMap.delete(searchColumn['title']);
+      this.columnFilterMap.delete(searchColumn);
     }
     if (this.columnFilterMap.size === 0) {
       this.dataTable.tableBody.content = JSON.parse(JSON.stringify(this.dataTableCopy.tableBody.content));
       return;
     }
-    console.log('this.columnFilterMap', this.columnFilterMap, this.columnFilterMap.size);
+    // console.log('this.columnFilterMap', this.columnFilterMap, this.columnFilterMap.size);
     this.dataTable.tableBody.content = this.dataTableCopy.tableBody.content.filter((category) => {
       // console.log('category', category);
       let validFilterCount: number = 0;
@@ -234,14 +264,14 @@ export class DynamicTableComponent implements OnInit, AfterViewInit, OnChanges {
         if (category.hasOwnProperty(key) && typeof category[key] === 'string') {
           // console.log('if');
           const element = category[key];
-          console.log('category[key]', key, category[key]);
+          // console.log('category[key]', key, category[key]);
           if (this.columnFilterMap.has(key)) {
             searchResult = category[key].toLowerCase().indexOf(this.columnFilterMap.get(key).toLowerCase()) > -1;
-            console.log('searchResult', searchResult);
+            // console.log('searchResult', searchResult);
           }
           if (searchResult) {
             validFilterCount++;
-            console.log('validFilterCount, this.columnFilterMap.size', validFilterCount, this.columnFilterMap.size);
+            // console.log('validFilterCount, this.columnFilterMap.size', validFilterCount, this.columnFilterMap.size);
             // break;
           }
         } else {
@@ -431,7 +461,7 @@ export class DynamicTableComponent implements OnInit, AfterViewInit, OnChanges {
     }
   }
   handleUploadedFile(files: FileList) {
-    console.log('files', files);
+    // console.log('files', files);
     for (const key in files) {
       if (files.hasOwnProperty(key) && key !== 'length') {
         // this.filesToUpload.push(files.item(parseInt(key, 10)));
@@ -439,15 +469,15 @@ export class DynamicTableComponent implements OnInit, AfterViewInit, OnChanges {
       }
     }
     this.uploadedFiles.emit(this.filesToUpload);
-    console.log('this.filesToUpload', this.filesToUpload);
+    // console.log('this.filesToUpload', this.filesToUpload);
   }
   downloadExport() {
-    console.log('this.exportLink', this.exportLink);
+    // console.log('this.exportLink', this.exportLink);
     // const out = this.exportLink.slice(0, this.exportLink.length - 1).replace('&&','&');
     // console.log('out', out);
 
     this.httpClient.get(this.exportLink, { headers: new HttpHeaders().set('Accept', 'application/vnd.ms-excel') }).subscribe(res => {
-      console.log('res', res);
+      // console.log('res', res);
     })
   }
 
@@ -455,7 +485,7 @@ export class DynamicTableComponent implements OnInit, AfterViewInit, OnChanges {
     this.exportToExcel.emit(true)
   }
   columnLengthChanged(event) {
-    console.log('columnValueChanges', event);
+    // console.log('columnValueChanges', event);
     this.columnLengthChanges.emit(event.target.value);
   }
 }

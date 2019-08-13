@@ -1,2 +1,23 @@
 <router-outlet></router-outlet>
-<app-dynamic-table [tableTitle]="'Search Result'" [dataTable]="dataTable" [actionButtons]="actionButtons" [totalElements]="totalTableElements"></app-dynamic-table>
+<app-dynamic-table [tableTitle]="'Search Result'" [dataTable]="dataTable" [actionButtons]="actionButtons" [totalElements]="totalTableElements">
+  <td [ngsw-searchField]="search" [searchColumnName]="'level'">
+    <input type="text" #search>
+  </td>
+  <td [ngsw-searchField]="roleName" [searchColumnName]="'roleName'">
+    <input type="text" #roleName>
+  </td>
+  <td [ngsw-searchField]="roleHideStatus" [searchColumnName]="'roleHideStatus'">
+    <select #roleHideStatus>
+      <option value="" disabled>select</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+    </select>
+  </td>
+  <td [ngsw-searchField]="roleDeleteStatus" [searchColumnName]="'roleDeleteStatus'">
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date" #roleDeleteStatus>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </td>
+</app-dynamic-table>
