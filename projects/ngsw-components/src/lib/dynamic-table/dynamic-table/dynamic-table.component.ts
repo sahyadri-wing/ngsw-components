@@ -19,7 +19,7 @@ import {
 import { InfoForGetPagination, DataTable, ActionButton, ActionOnTableRecord, TableSort, TableHeading } from '../dynamic-table.domain';
 import { FormControl } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { MatPaginatorIntl } from '@angular/material';
+import { MatPaginatorIntl, MatDatepicker } from '@angular/material';
 import { SearchFieldDirective } from '../directives/search-field.directive';
 // import { Urlconst } from 'app/constants/urlConst';
 
@@ -69,6 +69,15 @@ export class DynamicTableComponent implements OnInit, AfterViewInit, OnChanges, 
   @Input()
   public showRefuseButton = false;
   @Input() public showGlobelSearch = false;
+  @Input()
+  set searchValue(value) {
+    console.log('value', value);
+    if (!value.searchValue) {
+      return;
+    }
+    this.searchIntoRow(value.searchColumnName, value.searchValue);
+
+  }
   @Output() uploadedFiles = new EventEmitter<Array<File>>();
   @Output()
   public sortBy = new EventEmitter<object>();
@@ -151,7 +160,7 @@ export class DynamicTableComponent implements OnInit, AfterViewInit, OnChanges, 
     this.searchFieldChildren.map(res => {
       console.log('res => searchFieldChildren ', res);
       if (res && res.searchFieldRef && res.searchFieldRef.nodeName === 'INPUT') {
-        let simple = this.renderer.listen(res.searchFieldRef, 'change', (evt) => {
+        let simple = this.renderer.listen(res.searchFieldRef, 'keyup', (evt) => {
           console.log('Clicking the button', evt);
           this.searchIntoRow(res.searchColumnName, evt.srcElement.value);
         });
@@ -162,11 +171,11 @@ export class DynamicTableComponent implements OnInit, AfterViewInit, OnChanges, 
           // this.searchIntoRow(res.searchColumnName, evt.srcElement.value);
         });
       }
-      if (res && res.searchFieldRef && res.searchFieldRef.nodeName === 'INPUT') {
-        res.searchFieldRef.addEventListener('dateChange', (evt) => {
-          console.log('Clicking the button', evt);
-          // this.searchIntoRow(res.searchColumnName, evt.srcElement);
-        });
+      if (res && res.searchFieldRef && res.searchFieldRef instanceof MatDatepicker) {
+        console.log('MatDatepicker');
+        res['searchFieldRef' as any].closedStream.subscribe(res => {
+          console.log('datepicker closedStream', res);
+        })
       }
     })
 
@@ -264,7 +273,7 @@ export class DynamicTableComponent implements OnInit, AfterViewInit, OnChanges, 
         if (category.hasOwnProperty(key) && typeof category[key] === 'string') {
           // console.log('if');
           const element = category[key];
-          // console.log('category[key]', key, category[key]);
+          console.log('category[key]', key, category[key]);
           if (this.columnFilterMap.has(key)) {
             searchResult = category[key].toLowerCase().indexOf(this.columnFilterMap.get(key).toLowerCase()) > -1;
             // console.log('searchResult', searchResult);
