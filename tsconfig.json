@@ -26,10 +26,10 @@
         "dist/ngsw-table/*"
       ],
       "ngsw-components": [
-        "dist/ngsw-components"
+        "dist/ngsw-ui"
       ],
       "ngsw-components/*": [
-        "dist/ngsw-components/*"
+        "dist/ngsw-ui/*"
       ]
     }
   },
