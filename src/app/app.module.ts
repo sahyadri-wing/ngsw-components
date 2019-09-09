@@ -9,6 +9,7 @@ import { TestComponent } from './test/test.component';
 // import { DynamicTableModule, MaterialModule } from '../../dist/ngsw-components';
 
 import { DynamicTableModule, MaterialModule } from 'ngsw-components';
+import { NgswSearchTableModule } from 'ngsw-search-table';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { DynamicTableModule, MaterialModule } from 'ngsw-components';
     BrowserAnimationsModule,
     HttpClientModule,
     DynamicTableModule.forRoot(),
+    NgswSearchTableModule,
     MaterialModule
   ],
   providers: [],

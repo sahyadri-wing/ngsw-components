@@ -24,6 +24,7 @@
     "bootstrap": "^4.3.1",
     "hammerjs": "^2.0.8",
     "ngsw-ui": "file:dist/ngsw-ui",
+    "ngsw-search-table": "file:dist/ngsw-search-table",
     "rxjs": "~6.4.0",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"

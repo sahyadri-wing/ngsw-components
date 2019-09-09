@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'ngsw-tb-ngsw-table',
+  selector: 'ngsw-table',
   template: `
     <p>
       ngsw-table works!

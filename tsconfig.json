@@ -30,6 +30,12 @@
       ],
       "ngsw-components/*": [
         "dist/ngsw-ui/*"
+      ],
+      "ngsw-search-table": [
+        "dist/ngsw-search-table"
+      ],
+      "ngsw-search-table/*": [
+        "dist/ngsw-search-table/*"
       ]
     }
   },

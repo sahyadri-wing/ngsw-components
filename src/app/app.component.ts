@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { TableDataService } from 'ngsw-components';
+import { NgswSearchTableService } from 'ngsw-search-table';
+// import { TableDataService } from 'ngsw-components';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class AppComponent implements OnInit {
   actionButtons = [];
   totalTableElements;
   searchValue = {}
-  constructor(private httpClient: HttpClient, private tableDataService: TableDataService) { }
+  constructor(private httpClient: HttpClient, private tableDataService: NgswSearchTableService) { }
   ngOnInit(): void {
     this.actionButtons.push(this.tableDataService.addActionButton('view', 'visibility', 'view'));
     this.actionButtons.push(this.tableDataService.addActionButton('Edit', 'edit', 'Edit'));

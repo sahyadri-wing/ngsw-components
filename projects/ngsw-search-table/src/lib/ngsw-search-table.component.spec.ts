@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TestComponent } from './test.component';
+import { NgswSearchTableComponent } from './ngsw-search-table.component';
 
-describe('TestComponent', () => {
-  let component: TestComponent;
-  let fixture: ComponentFixture<TestComponent>;
+describe('NgswSearchTableComponent', () => {
+  let component: NgswSearchTableComponent;
+  let fixture: ComponentFixture<NgswSearchTableComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TestComponent ]
+      declarations: [ NgswSearchTableComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TestComponent);
+    fixture = TestBed.createComponent(NgswSearchTableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
