@@ -72,3 +72,7 @@ export interface ActionOnTableRecord {
   tableName: string;
   recordIndex?: number;
 }
+export interface ColumnSearchInterface {
+  searchValue: string;
+  searchColumnName: string;
+}

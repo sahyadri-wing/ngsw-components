@@ -1,8 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { NgswSearchTableService } from 'ngsw-search-table';
+import { NgswSearchTableService, ColumnSearch } from 'ngsw-search-table';
 // import { TableDataService } from 'ngsw-components';
-
 
 @Component({
   selector: 'app-root',
@@ -39,10 +38,13 @@ export class AppComponent implements OnInit {
     //   searchColumnName
     // };
 
-    this.searchValue = {
+    const searchValue = {
       searchValue: date.getDate() + '-' + (((date.getMonth() + 1) < 10) ? `0${ (date.getMonth() + 1) }` : (date.getMonth() + 1)) + '-' + date.getFullYear(),
       searchColumnName
     };
+
+    this.searchValue = new ColumnSearch(searchValue.searchValue, searchValue.searchColumnName);
+
     // 12-08-2019 11:45:30
   }
 }

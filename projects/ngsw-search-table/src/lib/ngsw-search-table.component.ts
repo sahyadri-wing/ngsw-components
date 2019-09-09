@@ -1,9 +1,12 @@
 import { Component, OnInit, AfterViewInit, AfterContentInit, OnChanges, Input, EventEmitter, Output, ViewChild, ContentChildren, QueryList, Renderer2, SimpleChanges, ElementRef } from '@angular/core';
 import { MatPaginatorIntl, MatDatepicker } from '@angular/material';
-import { TableHeading, DataTable, ActionButton, TableSort, InfoForGetPagination, ActionOnTableRecord } from './ngsw-search-table';
+import { TableHeading, DataTable, ActionButton, TableSort, InfoForGetPagination, ActionOnTableRecord, ColumnSearchInterface } from './ngsw-search-table';
 import { SearchFieldDirective } from './directives/search-field.directive';
 import { FormControl } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+export class ColumnSearch implements ColumnSearchInterface {
+  constructor(public searchValue: string, public searchColumnName: string) { }
+}
 
 @Component({
   selector: 'ngsw-search-table',
@@ -50,9 +53,9 @@ export class NgswSearchTableComponent implements OnInit, AfterViewInit, OnChange
   public showRefuseButton = false;
   @Input() public showGlobelSearch = false;
   @Input()
-  set searchValue(value) {
-    console.log('value', value);
-    if (!value.searchValue) {
+  set searchValue(value: ColumnSearch) {
+    console.log('value', value, '--->');
+    if (!(value instanceof ColumnSearch) || !value.searchValue || !value.searchColumnName) {
       return;
     }
     this.searchIntoRow(value.searchColumnName, value.searchValue);
