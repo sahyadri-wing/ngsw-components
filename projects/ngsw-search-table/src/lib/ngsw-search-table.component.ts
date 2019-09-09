@@ -151,7 +151,7 @@ export class NgswSearchTableComponent implements OnInit, AfterViewInit, OnChange
       if (res && res.searchFieldRef && res.searchFieldRef.nodeName === 'SELECT') {
         let simple = this.renderer.listen(res.searchFieldRef, 'change', (evt) => {
           console.log('change', evt);
-          // this.searchIntoRow(res.searchColumnName, evt.srcElement.value);
+          this.searchIntoRow(res.searchColumnName, evt.srcElement.value);
         });
       }
       if (res && res.searchFieldRef && res.searchFieldRef instanceof MatDatepicker) {
